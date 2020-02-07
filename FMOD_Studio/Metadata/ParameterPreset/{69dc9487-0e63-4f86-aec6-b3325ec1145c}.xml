@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{69dc9487-0e63-4f86-aec6-b3325ec1145c}">
+		<property name="name">
+			<value>Progression</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d97ed4af-bf11-4781-9123-373b93517ed0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4bb54b8d-4975-44c5-945b-9496de8f1fd8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4bb54b8d-4975-44c5-945b-9496de8f1fd8}">
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.55000001192092896</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>0.55000001192092896</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+	</object>
+</objects>
