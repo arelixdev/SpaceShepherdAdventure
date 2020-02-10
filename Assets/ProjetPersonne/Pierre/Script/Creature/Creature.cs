@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Pathfinding;
 
 public class Creature : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Creature : MonoBehaviour
 
     public float ReactionTime;
 
-    public NavMeshAgent DeplacementCreature;
+    public NavMeshAgent deplacementCreature;
 
     public IComportementBase Action;
 
@@ -69,7 +70,6 @@ public class Creature : MonoBehaviour
         ///  if he does have a reaction, he will give the creature a position to go, with a duration.
         ///  
         Vector3 AverageDirection= new Vector3();
-
         DurationReaction = 0;
         if (InZone.Count>0)
         {
@@ -88,13 +88,14 @@ public class Creature : MonoBehaviour
             if (AverageDirection.magnitude>1)
             {
                 AverageDirection = AverageDirection.normalized * DurationReaction * Speed;
-                DeplacementCreature.speed = Speed*DurationReaction;
+                deplacementCreature.speed = Speed*DurationReaction;
                 positionToGo = GivePosition(AverageDirection);
-                DeplacementCreature.SetDestination(positionToGo);
+
+                deplacementCreature.SetDestination(positionToGo);
                 cible.LookAt(positionToGo);
             }
         }
-        
+
     }
 
     public Vector3 GivePosition(Vector3 Direction)
@@ -114,7 +115,7 @@ public class Creature : MonoBehaviour
 
     public void Update()
     {
-        if (DeplacementCreature.isStopped)
+        if (deplacementCreature.isStopped)
         {
             positionToGo = Vector3.zero;
         }
