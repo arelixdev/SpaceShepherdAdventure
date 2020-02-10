@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ToonForwardRenderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: 7292069192585013408}
-  - {fileID: 4179355991726467959}
+  - {fileID: 0}
+  - {fileID: 4335862473355771093}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -54,7 +54,7 @@ MonoBehaviour:
     blitMaterialPassIndex: 0
     destination: 0
     textureId: _BlitPassTexture
---- !u!114 &7292069192585013408
+--- !u!114 &4335862473355771093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,11 +64,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: Test
+  m_Name: NewRenderObjects
   m_EditorClassIdentifier: 
   settings:
-    passTag: Test
-    Event: 450
+    passTag: NewRenderObjects
+    Event: 400
     filterSettings:
       RenderQueueType: 0
       LayerMask:
