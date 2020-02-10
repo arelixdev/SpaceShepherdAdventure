@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DayNight
-  m_Shader: {fileID: 4800000, guid: 6fec5d7edfd066c4facf9637f952c003, type: 3}
+  m_Shader: {fileID: 4800000, guid: 100da80b20497754593dd9e966c9b4f9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -23,6 +23,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _Gloss: 5.92
+    - _Glossiness: 0.5
+    - _Metallic: 0
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _MyColor: {r: 1, g: 0, b: 0, a: 1}
