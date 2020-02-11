@@ -60,16 +60,19 @@ namespace Pathfinding {
 			}
 
 			if (positionFound && newPosition != target.position) {
-				target.position = newPosition;
-
-				if (onlyOnDoubleClick) {
-					// Slightly inefficient way of finding all AIs, but this is just an example script, so it doesn't matter much.
-					// FindObjectsOfType does not support interfaces unfortunately.
-					IAstarAI[] ais = FindObjectsOfType<MonoBehaviour>().OfType<IAstarAI>().ToArray();
+                //target.position = newPosition;
+                
+                if (onlyOnDoubleClick) {
+                    // Slightly inefficient way of finding all AIs, but this is just an example script, so it doesn't matter much.
+                    // FindObjectsOfType does not support interfaces unfortunately.
+                    /*IAstarAI[] ais = FindObjectsOfType<MonoBehaviour>().OfType<IAstarAI>().ToArray();
 					for (int i = 0; i < ais.Length; i++) {
 						if (ais[i] != null) ais[i].SearchPath();
-					}
-				}
+					}*/
+                    IAstarAI ia = GameObject.FindGameObjectWithTag("Player").GetComponent<IAstarAI>();
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<AIDestinationSetter>().posToGo = newPosition;
+                    if (ia != null) ia.SearchPath();
+                }
 			}
 		}
 	}
