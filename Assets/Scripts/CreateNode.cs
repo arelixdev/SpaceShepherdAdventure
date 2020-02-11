@@ -16,9 +16,12 @@ public class CreateNode : MonoBehaviour
 
     void Start()
     {
-        parentObstacle.position = transform.position;
-        parentObstacle.localScale = transform.localScale;
-        parentObstacle.rotation = transform.rotation;
+        if (parentObstacle != null)
+        {
+            parentObstacle.position = transform.position;
+            parentObstacle.localScale = transform.localScale;
+            parentObstacle.rotation = transform.rotation;
+        }
 
         mesh = GetComponent<MeshFilter>().mesh;
 
@@ -29,6 +32,7 @@ public class CreateNode : MonoBehaviour
             sphere.transform.parent = transform;
             sphere.transform.localScale = scaling;
             sphere.transform.localPosition = mesh.vertices[i];
+
 
             float rd = Random.Range(0, 10);
             if (rd < chanceSapin)
@@ -63,10 +67,10 @@ public class CreateNode : MonoBehaviour
             }
         }
 
-        Invoke("DetectUnwalk", 1);
+        Invoke("DetectUnwalk", .5f);
     }
 
-    private void DetectUnwalk()
+    public void DetectUnwalk()
     {
         AstarPath.active.Scan();
 
@@ -74,16 +78,15 @@ public class CreateNode : MonoBehaviour
         foreach (var node in pg.nodes)
         {
             node.Walkable = true;
-            Collider[] hitColliders = Physics.OverlapSphere((Vector3)node.position, .5f);
+            Collider[] hitColliders = Physics.OverlapSphere((Vector3)node.position, .25f);
             for (int i = 0; i < hitColliders.Length; i++)
             {
                 if (hitColliders[i].CompareTag("obstacle"))
                 {
                     node.Walkable = false;
                 }
-                else if (hitColliders[i].name == "Eau")
+                else if (hitColliders[i].CompareTag("water"))
                 {
-                    Debug.Log("Eau");
                     node.Tag = (1 << 0);
                 }
             }
