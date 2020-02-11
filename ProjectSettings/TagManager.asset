@@ -9,6 +9,8 @@ TagManager:
   - node
   - water
   - night
+  - mouton
+  - berger
   layers:
   - Default
   - TransparentFX

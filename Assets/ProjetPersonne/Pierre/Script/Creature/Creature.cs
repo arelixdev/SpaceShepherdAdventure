@@ -47,15 +47,13 @@ public class Creature : MonoBehaviour
 
     protected Dictionary<string, IComportementBase> Comportement = new Dictionary<string, IComportementBase>();
 
-    public Transform cible;
-
-
-
     public void Start()
     {
         InitializeComportement();
         AttributeStimuly();
         InvokeRepeating("Tick", ReactionTime, ReactionTime);
+        //posCreature.posToGo = Vector3.down;
+        posCreature.posToGo = transform.position;
     }
 
     public void InitializeComportement()
@@ -83,7 +81,6 @@ public class Creature : MonoBehaviour
                 if (reaction.Weight > DurationReaction)
                 {
                     DurationReaction = reaction.Weight;
-                    Debug.Log(reaction.comportement);
                 }
                 if (Comportement[reaction.comportement].MoveTo(this, reaction.cibleReaction).magnitude>1)
                 {
@@ -94,9 +91,10 @@ public class Creature : MonoBehaviour
             {
                 AverageDirection = AverageDirection.normalized * DurationReaction * Speed;
                 aiCreature.maxSpeed = Speed*DurationReaction;
-                cible.position = GivePosition(AverageDirection* range);
-                Debug.Log("cible pôsition " + cible.position) ; 
+                //cible.position = GivePosition(AverageDirection* range);
+                posCreature.posToGo = GivePosition(AverageDirection * range);
                 aiCreature.SearchPath();
+                
                 //deplacementCreature.SetDestination(positionToGo);
             }
         }

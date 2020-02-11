@@ -15,11 +15,12 @@ public class ComportementSociale : ComportementBase
         {
             return Vector3.zero;
         }
-        if (Target.GetComponent<Creature>()!=null)
+        if (Target.GetComponentInParent<Creature>()!=null)
         {
-            if (Target.GetComponent<Creature>().DurationReaction > 1)
+            if (Target.GetComponentInParent<Creature>().DurationReaction > 1)
             {
-                return -(Creature.transform.position - Target.GetComponent<Creature>().positionToGo) ;
+                Debug.Log("prout " + -(Creature.transform.position - Target.GetComponentInParent<Creature>().posCreature.posToGo));
+                return -(Creature.transform.position - Target.GetComponentInParent<Creature>().posCreature.posToGo) ;
             }
             else
             {
