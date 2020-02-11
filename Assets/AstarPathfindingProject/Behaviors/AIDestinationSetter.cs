@@ -15,7 +15,6 @@ namespace Pathfinding {
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_a_i_destination_setter.php")]
 	public class AIDestinationSetter : VersionedMonoBehaviour {
 		/// <summary>The object that the AI should move to</summary>
-		public Transform target;
         public Vector3 posToGo;
 		IAstarAI ai;
 
@@ -43,7 +42,6 @@ namespace Pathfinding {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, -transform.up, out hit))
             {
-                target.position = hit.point;
                 posToGo = hit.point;
             }
         }
