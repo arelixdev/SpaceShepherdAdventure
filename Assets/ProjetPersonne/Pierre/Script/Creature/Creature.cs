@@ -36,7 +36,12 @@ public class Creature : MonoBehaviour
 
     public float ReactionTime;
 
-    public NavMeshAgent deplacementCreature;
+    public float range;
+
+    //public NavMeshAgent deplacementCreature;
+
+    public AIPathAlignedToSurface aiCreature;
+    public AIDestinationSetter posCreature;
 
     public IComportementBase Action;
 
@@ -88,11 +93,11 @@ public class Creature : MonoBehaviour
             if (AverageDirection.magnitude>1)
             {
                 AverageDirection = AverageDirection.normalized * DurationReaction * Speed;
-                deplacementCreature.speed = Speed*DurationReaction;
-                positionToGo = GivePosition(AverageDirection);
-
-                deplacementCreature.SetDestination(positionToGo);
-                cible.LookAt(positionToGo);
+                aiCreature.maxSpeed = Speed*DurationReaction;
+                cible.position = GivePosition(AverageDirection* range);
+                Debug.Log("cible pôsition " + cible.position) ; 
+                aiCreature.SearchPath();
+                //deplacementCreature.SetDestination(positionToGo);
             }
         }
 
@@ -115,7 +120,7 @@ public class Creature : MonoBehaviour
 
     public void Update()
     {
-        if (deplacementCreature.isStopped)
+        if (aiCreature.isStopped)
         {
             positionToGo = Vector3.zero;
         }

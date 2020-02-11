@@ -16,12 +16,12 @@ public class Wrap : MonoBehaviour
         if (Mathf.Abs(transform.position.x)>11f)
         {
             transform.position = new Vector3(-(transform.position.x*0.95f), 0.5f, transform.position.z) ;
-            thiscreature.deplacementCreature.destination= transform.position = new Vector3((transform.position.x * 0.7f), 0.5f, transform.position.z*0.7f);
+            //thiscreature.deplacementCreature.destination= transform.position = new Vector3((transform.position.x * 0.7f), 0.5f, transform.position.z*0.7f);
         }
         if (Mathf.Abs(transform.position.z) > 9f)
         {
             transform.position = new Vector3(transform.position.x, 0.5f,(-transform.position.z * 0.95f));
-            thiscreature.deplacementCreature.destination = transform.position = new Vector3((transform.position.x * 0.7f), 0.5f, transform.position.z * 0.7f);
+            //thiscreature.deplacementCreature.destination = transform.position = new Vector3((transform.position.x * 0.7f), 0.5f, transform.position.z * 0.7f);
         }
     }
 }

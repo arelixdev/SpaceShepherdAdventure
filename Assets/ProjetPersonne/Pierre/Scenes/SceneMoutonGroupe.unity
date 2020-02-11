@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 3621696276178063107, guid: bf1290067affbb246a2e956b6972cade,
         type: 3}
       propertyPath: DayStimuli.Array.data[1].Weight
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3621696276178063167, guid: bf1290067affbb246a2e956b6972cade,
         type: 3}
@@ -1480,6 +1480,7 @@ GameObject:
   - component: {fileID: 1893219724}
   - component: {fileID: 1893219723}
   - component: {fileID: 1893219722}
+  - component: {fileID: 1893219726}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1583,6 +1584,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 80.408005, y: 0, z: 0}
+--- !u!114 &1893219726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893219721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526aecabdb52bf14d8198c09cfa2e5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1928666890
 GameObject:
   m_ObjectHideFlags: 0

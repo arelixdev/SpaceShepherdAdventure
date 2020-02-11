@@ -14,7 +14,6 @@ public class DetectionZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
         for (int i = 0; i < stimulyZoneDay.Count; i++)
         {
             if (other.tag == stimulyZoneDay[i].target)
