@@ -9,6 +9,8 @@ TagManager:
   - node
   - water
   - night
+  - nenufar
+  - boo
   layers:
   - Default
   - TransparentFX
