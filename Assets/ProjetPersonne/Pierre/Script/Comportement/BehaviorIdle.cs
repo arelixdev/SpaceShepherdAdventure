@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComportementIdle : ComportementBase
+public class BehaviorIdle : BehaviorBase
 {
     /// <summary>
     /// Fuite envoie le gameObject dans la direction opposés à ce qu'il a peur
@@ -24,4 +24,9 @@ public class ComportementIdle : ComportementBase
             }
             return finalPosition;
      * */
+
+    public override bool TakeAction(Creature Creature, Creature.Stimuli stimuli, GameObject target)
+    {
+        return true;
+    }
 }

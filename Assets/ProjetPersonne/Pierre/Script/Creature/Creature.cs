@@ -10,15 +10,20 @@ public class Creature : MonoBehaviour
     /// this script give to an animal a behaviour to its environnement.
     /// 
     /// </summary>
-
+    /// 
     [System.Serializable]
     public class Stimuli
     {
-        public string comportement;
+        public EBehavior compNom;
         public DetectionZone detection;
-        public float Weight;
-        public string target;
-        public GameObject cibleReaction;
+        public float weight;
+        public float distance;
+        public string tag;
+        public GameObject target;
+        public bool actNow;
+        public bool frightening;
+        public float maxWeightAct;
+        public float minWeightAct;
     }
 
     [SerializeField]
@@ -30,75 +35,73 @@ public class Creature : MonoBehaviour
 
     public Vector3 positionToGo;
 
-    public float Speed;
+    public float speed;
 
-    public float DurationReaction;
+    public float duration;
 
-    public float ReactionTime;
+    public float curWeight;
 
-    public float range;
-
-    //public NavMeshAgent deplacementCreature;
+    public float reactionTime;
 
     public AIPathAlignedToSurface aiCreature;
     public AIDestinationSetter posCreature;
 
-    public IComportementBase Action;
+    public IBehavior Action;
 
-    protected Dictionary<string, IComportementBase> Comportement = new Dictionary<string, IComportementBase>();
+    public Dictionary<EBehavior, IBehavior> DComp = new Dictionary<EBehavior, IBehavior>();
 
     public void Start()
     {
         InitializeComportement();
         AttributeStimuly();
-        InvokeRepeating("Tick", ReactionTime, ReactionTime);
-        //posCreature.posToGo = Vector3.down;
+        StartCoroutine(Tick(reactionTime));
         posCreature.posToGo = transform.position;
     }
 
     public void InitializeComportement()
     {
-        Comportement = new Dictionary<string, IComportementBase>() {
-        { "fuite", ComportementBase.fuite },
-        {"sociale", ComportementBase.sociale },
-        {"idle", ComportementBase.idle },
-        {"confiant", ComportementBase.sociale }
+        DComp = new Dictionary<EBehavior, IBehavior>() {
+            { EBehavior.approach, BehaviorBase.approach },
+            { EBehavior.flee, BehaviorBase.flee },
+            { EBehavior.idle, BehaviorBase.idle },
+            { EBehavior.social, BehaviorBase.social }
         };
     }
 
-    public void Tick()
+    public IEnumerator Tick(float reactionOne)
     {
         /// 
         /// Every reaction time, the animal will check if he sees something he has a reaction for :
         ///  if he does have a reaction, he will give the creature a position to go, with a duration.
         ///  
-        Vector3 AverageDirection= new Vector3();
-        DurationReaction = 0;
-        if (InZone.Count>0)
+        Vector3 AverageDirection = new Vector3();
+        float WeightTick=0;
+        bool isStimule=false;
+        if (InZone.Count > 0)
         {
             foreach (Stimuli reaction in InZone)
             {
-                if (reaction.Weight > DurationReaction)
+                if (reaction.weight > WeightTick)
                 {
-                    DurationReaction = reaction.Weight;
+                    WeightTick = reaction.weight;
+                    duration = reaction.distance;
                 }
-                if (Comportement[reaction.comportement].MoveTo(this, reaction.cibleReaction).magnitude>1)
+                if (DComp[reaction.compNom].TakeAction(this,reaction, reaction.target))
                 {
-                    AverageDirection += Comportement[reaction.comportement].MoveTo(this, reaction.cibleReaction);
+                    AverageDirection += DComp[reaction.compNom].MoveTo(this, reaction.target);
+                    isStimule = true;
                 }
             }
-            if (AverageDirection.magnitude>1)
+            if (isStimule)
             {
-                AverageDirection = AverageDirection.normalized * DurationReaction * Speed;
-                aiCreature.maxSpeed = Speed*DurationReaction;
-                //cible.position = GivePosition(AverageDirection* range);
-                posCreature.posToGo = GivePosition(AverageDirection * range);
+                curWeight = WeightTick;
+                AverageDirection = AverageDirection.normalized * duration * speed;
+                posCreature.posToGo = GivePosition(AverageDirection * duration);
                 aiCreature.SearchPath();
-                
-                //deplacementCreature.SetDestination(positionToGo);
             }
         }
-
+        yield return new WaitForSeconds(reactionOne);
+        StartCoroutine(Tick(reactionTime));
     }
 
     public Vector3 GivePosition(Vector3 Direction)
@@ -118,9 +121,9 @@ public class Creature : MonoBehaviour
 
     public void Update()
     {
-        if (aiCreature.isStopped)
+        if (aiCreature.reachedDestination)
         {
-            positionToGo = Vector3.zero;
+            curWeight = 0;
         }
     }
 }
