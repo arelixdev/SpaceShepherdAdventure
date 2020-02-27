@@ -11702,7 +11702,7 @@ GameObject:
   - component: {fileID: 439457697}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Player
+  m_TagString: mouton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18316,7 +18316,7 @@ GameObject:
   - component: {fileID: 716305381}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Player
+  m_TagString: mouton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21605,13 +21605,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detect: 0
-  radius: 0.5
+  radius: 0.4
   tagNode:
   - tagHit: obstacle
     walkable: 0
     layerNode: 0
   - tagHit: water
-    walkable: 1
+    walkable: 0
     layerNode: 1
   - tagHit: nenufar
     walkable: 1
@@ -21619,6 +21619,7 @@ MonoBehaviour:
   - tagHit: boo
     walkable: 0
     layerNode: 3
+  hitColliders: []
 --- !u!114 &762826009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31991,7 +31992,7 @@ Transform:
   m_GameObject: {fileID: 1228940600}
   m_LocalRotation: {x: -0.10481456, y: 0.76143336, z: 0.10655923, w: 0.6307759}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39, y: 39, z: 39}
+  m_LocalScale: {x: 38, y: 38, z: 38}
   m_Children: []
   m_Father: {fileID: 30541877}
   m_RootOrder: 0

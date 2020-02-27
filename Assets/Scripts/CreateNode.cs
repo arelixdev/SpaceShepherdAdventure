@@ -10,9 +10,17 @@ public class CreateNode : MonoBehaviour
     Mesh mesh;
     public bool barycentre;
 
+    public bool Colide(Vector3 pos)
+    {
+        int layerMask = ~LayerMask.GetMask("Node", "Ignore Raycast");
+        Collider[] hitColliders = Physics.OverlapSphere(transform.parent.TransformPoint(pos), GetComponent<SetNode>().radius, layerMask);
+        return hitColliders.Length > 0;
+    }
+
     void Update()
     {
-        if(spawn)
+        Debug.Log(transform.TransformPoint(GetComponent<MeshFilter>().sharedMesh.vertices[407]));
+        if (spawn)
         {
             spawn = false;
             ClearListEditor();
@@ -25,9 +33,16 @@ public class CreateNode : MonoBehaviour
 
             for (int i = 0; i < mesh.vertices.Length; i++)
             {
-                GameObject sphere = new GameObject("Node_" + i.ToString());
-                sphere.transform.parent = parentNode.transform;
-                sphere.transform.localPosition = mesh.vertices[i];
+                //GameObject sphere = new GameObject("Node_" + i.ToString());
+                if (Colide(mesh.vertices[i]))
+                {
+                    GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    sphere.layer = LayerMask.NameToLayer("Node");
+                    sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                    sphere.name = "Node_" + i.ToString();
+                    sphere.transform.parent = parentNode.transform;
+                    sphere.transform.localPosition = mesh.vertices[i];
+                }
             }
             if (barycentre)
             {
@@ -43,9 +58,16 @@ public class CreateNode : MonoBehaviour
                     p2 = transform.TransformPoint(p2);
                     Vector3 center = ((p0 + p1 + p2) / 3);
 
-                    GameObject sphere = new GameObject("Node_" + i.ToString() + "_Centre");
-                    sphere.transform.parent = parentNode.transform;
-                    sphere.transform.position = center;
+                    //GameObject sphere = new GameObject("Node_" + i.ToString() + "_Centre");
+                    if (Colide(center))
+                    {
+                        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                        sphere.layer = LayerMask.NameToLayer("Node");
+                        sphere.name = "Node_" + i.ToString() + "_Centre";
+                        sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                        sphere.transform.parent = parentNode.transform;
+                        sphere.transform.position = center;
+                    }
                 }
             }
             AstarPath.active.Scan();
@@ -82,5 +104,10 @@ public class CreateNode : MonoBehaviour
             if (transform.GetChild(i).name.Contains("Node"))
                 Destroy(transform.GetChild(i).gameObject);
         }
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(new Vector3(-6.173178f, 16.62939f, 9.238789f), .3f);
     }
 }

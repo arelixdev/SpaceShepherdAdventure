@@ -41,7 +41,8 @@ public class NightEnvironnement : MonoBehaviour
                     break;
             }
         }
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("mouton" +
+            ""))
         {
             switch (currentType)
             {
@@ -66,7 +67,7 @@ public class NightEnvironnement : MonoBehaviour
                     break;
             }
         }
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("mouton"))
         {
             switch (currentType)
             {

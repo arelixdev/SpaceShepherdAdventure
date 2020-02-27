@@ -13,6 +13,8 @@ public class SetNode : MonoBehaviour
 
     public static SetNode _instance;
 
+    public Collider[] hitColliders;
+
     void Awake()
     {
         if (_instance == null)
@@ -42,7 +44,7 @@ public class SetNode : MonoBehaviour
     public void DetectUnwalk()
     {
         PointGraph pg = AstarPath.active.graphs[0] as PointGraph;
-        
+
         foreach (var node in pg.nodes)
         {
             NodeInfo(node, true);
@@ -52,15 +54,19 @@ public class SetNode : MonoBehaviour
     public void NodeInfo(PointNode node, bool clear)
     {
         node.Walkable = true;
-        Collider[] hitColliders = Physics.OverlapSphere((Vector3)node.position, radius);
+        hitColliders = Physics.OverlapSphere((Vector3)node.position, radius);
+
         for (int i = 0; i < hitColliders.Length; i++)
         {
             foreach (nodeTag info in tagNode)
             {
                 if (hitColliders[i].CompareTag(info.tagHit))
                 {
-                    Debug.Log((hitColliders[i].name));
-                    Debug.Log(info.walkable);
+                    if (!clear)
+                    {
+                        Debug.Log((hitColliders[i].name));
+                        Debug.Log(info.walkable);
+                    }
                     node.Walkable = info.walkable;
                     node.Tag = info.layerNode;
                     if (hitColliders[i].GetComponent<NightEnvironnement>() && clear)
@@ -80,3 +86,4 @@ public class SetNode : MonoBehaviour
         public uint layerNode;
     }
 }
+
