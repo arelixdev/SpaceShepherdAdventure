@@ -21,18 +21,26 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Nenuphar
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: fc5337be1419e104f8dfca7309b270ce,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_70A6D0D6:
+        m_Texture: {fileID: 2800000, guid: 62620317af9dd354688c7015da92e9a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_BE131F4C:
+        m_Texture: {fileID: 2800000, guid: b64d648cdf840e44dba23758949aa028, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: b64d648cdf840e44dba23758949aa028, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -61,7 +69,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_C4A75C1_Out_0:
+        m_Texture: {fileID: 2800000, guid: d9d97d906c881c44fb89b634206522e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_134E52E7: 3.18
+    - Vector1_29AB73BF: 288.03
+    - Vector1_4D23E062: 0
+    - Vector1_6D0C404B: 0.46
+    - Vector1_9B06EB91: -0
+    - Vector1_D3EBF41F: 0
+    - Vector1_DAC32C57: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -84,6 +103,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_8C747D18: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0}
+    - Color_C6CCB9DB: {r: 1, g: 1, b: 1, a: 0}
+    - Color_EF44F0C0: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
