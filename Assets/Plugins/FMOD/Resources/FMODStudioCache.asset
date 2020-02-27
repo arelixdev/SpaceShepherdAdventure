@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8845508331502667056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
+--- !u!114 &-8554674376513049815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637169311611651188
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8243249242909365886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,6 +50,24 @@ MonoBehaviour:
   Path: FMOD_Studio/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637166670284753435
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7158115713583099432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637166865949126785
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -183,17 +236,16 @@ MonoBehaviour:
   Path: event:/Mouton/Sheep
   guid: ed476e6ad6b2a04bb65ad9112aa03ad1
   Banks:
-  - {fileID: -1398571293754048138}
+  - {fileID: -8554674376513049815}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 3920144139754661586}
-  - {fileID: 7094067823712043580}
+  - {fileID: -8845508331502667056}
   MinDistance: 1
   MaxDistance: 20
-  Length: 2330
---- !u!114 &-3473277847969819412
+  Length: 850
+--- !u!114 &-3290664269959275160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,13 +254,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sheep/Sheep1
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Name: Sheep1
-  Min: 0
-  Max: 2
-  Default: 0
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637169264810658335
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-3250359326091872685
 MonoBehaviour:
@@ -301,7 +354,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &-1685323192867919223
+--- !u!114 &-1607936623428350207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310,14 +363,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep2
   m_EditorClassIdentifier: 
-  Path: FMOD_Studio/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637167651517116899
-  LoadResult: 0
-  FileSizes: []
+  Name: Sheep2
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 0
 --- !u!114 &-1594058429574259332
 MonoBehaviour:
@@ -342,7 +394,41 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 850
---- !u!114 &-1398571293754048138
+--- !u!114 &-1187340392889577169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
+--- !u!114 &-1091817416104672572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep1
+  m_EditorClassIdentifier: 
+  Name: Sheep1
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-569681123486972572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,10 +442,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Studio/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637169307902358221
+  lastModified: 637166717477465217
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &-442483782529633967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
 --- !u!114 &-213668361579408283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,17 +494,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5801362199921300617}
-  - {fileID: -1398571293754048138}
+  - {fileID: -8554674376513049815}
   EditorEvents:
   - {fileID: -3684493384192942876}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1398571293754048138}
+  - {fileID: -8554674376513049815}
   StringsBanks:
   - {fileID: 5801362199921300617}
-  stringsBankWriteTime: 637169307902398141
+  stringsBankWriteTime: 637169311611750933
   cacheVersion: 3
---- !u!114 &414617074201573697
+--- !u!114 &376396917501216461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -410,30 +513,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sheep/Sheep1
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Name: Sheep1
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &960641662728845256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sheep/Sheep1
-  m_EditorClassIdentifier: 
-  Name: Sheep1
-  Min: 0
-  Max: 2
-  Default: 0
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637169310621899764
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &1204625720876794116
 MonoBehaviour:
@@ -510,7 +597,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &3920144139754661586
+--- !u!114 &3760543352444203097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -520,13 +607,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sheep/Sheep1
+  m_Name: parameter:/Sheep/Sheep
   m_EditorClassIdentifier: 
-  Name: Sheep1
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
+  Name: Sheep
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
+--- !u!114 &4142172913335382530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637166869486806765
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4215236841481334426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +650,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &4486055877311502141
+--- !u!114 &4325777984172780830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -555,12 +660,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sheep/Sheep1
+  m_Name: parameter:/Sheep/Sheep
   m_EditorClassIdentifier: 
-  Name: Sheep1
-  Min: 0
-  Max: 2
-  Default: 0
+  Name: Sheep
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
+--- !u!114 &4681842395608818663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637166861026357340
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &4958682119302768194
 MonoBehaviour:
@@ -580,7 +703,44 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &4978008265811462746
+--- !u!114 &5692354438943977985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
+--- !u!114 &5801362199921300617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637169311611750933
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 838
+  Exists: 1
+--- !u!114 &6055494861146831708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -597,26 +757,6 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
---- !u!114 &5801362199921300617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_Studio/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637169307902398141
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 884
-  Exists: 1
 --- !u!114 &6421174001267638723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,41 +807,6 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 0
---- !u!114 &7094067823712043580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sheep/Sheep2
-  m_EditorClassIdentifier: 
-  Name: Sheep2
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &7840140654920065954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_Studio/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637166715867351501
-  LoadResult: 0
-  FileSizes: []
   Exists: 0
 --- !u!114 &7849810267804795018
 MonoBehaviour:
@@ -775,7 +880,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &9094577079999495234
+--- !u!114 &8835467899248564480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -789,7 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Studio/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637166670284753435
+  lastModified: 637166722569226590
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -810,4 +915,21 @@ MonoBehaviour:
   lastModified: 637166668404073489
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &9204205670565003163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep1
+  m_EditorClassIdentifier: 
+  Name: Sheep1
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 0
