@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tree_02
+  m_Name: tree_02
   m_Shader: {fileID: -6465566751694194690, guid: fc5337be1419e104f8dfca7309b270ce,
     type: 3}
   m_ShaderKeywords: 
@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_70A6D0D6:
-        m_Texture: {fileID: 2800000, guid: e52a04edfa370fa4db227ca97db840ad, type: 3}
+        m_Texture: {fileID: 2800000, guid: 61c38876e8afa9548938c6629030e280, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_844D7561:
@@ -126,7 +126,7 @@ Material:
     - Color_8C747D18: {r: 1, g: 1, b: 1, a: 0}
     - Color_C6CCB9DB: {r: 1, g: 1, b: 1, a: 0}
     - Color_E5F41818: {r: 0, g: 0, b: 0, a: 0}
-    - Color_EF44F0C0: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0}
+    - Color_EF44F0C0: {r: 2.6701567, g: 2.6701567, b: 2.6701567, a: 0}
     - _BaseColor: {r: 1, g: 0.6511485, b: 0.10849059, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

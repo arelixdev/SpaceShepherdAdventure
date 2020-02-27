@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_70A6D0D6:
-        m_Texture: {fileID: 2800000, guid: 3ff9fdccbc50e5346ba053b384b9ec11, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9493c9251df4c8b4180d75cbf5c70750, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_844D7561:
@@ -141,11 +141,11 @@ Material:
     m_Colors:
     - Color_37D82E7B: {r: 0, g: 0, b: 0, a: 0}
     - Color_8C19D40A: {r: 0, g: 0, b: 1, a: 1}
-    - Color_8C747D18: {r: 0.087814875, g: 0.38419005, b: 0, a: 1}
+    - Color_8C747D18: {r: 0.21960784, g: 0.30588236, b: 0.20392157, a: 1}
     - Color_C6CCB9DB: {r: 0, g: 0, b: 0, a: 1}
     - Color_E5F41818: {r: 0, g: 0, b: 0, a: 0}
     - Color_E629379A: {r: 1, g: 1, b: 1, a: 0}
-    - Color_EF44F0C0: {r: 1, g: 1, b: 1, a: 0}
+    - Color_EF44F0C0: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.44636142, g: 0.75471693, b: 0.060519747, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
