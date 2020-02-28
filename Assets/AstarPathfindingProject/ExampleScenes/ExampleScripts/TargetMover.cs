@@ -30,14 +30,14 @@ namespace Pathfinding {
 		}
 
 		public void OnGUI () {
-			if (onlyOnDoubleClick && cam != null && Event.current.type == EventType.MouseDown && Event.current.clickCount == 2) {
+			if (onlyOnDoubleClick && cam != null && Event.current.type == EventType.MouseDown && Event.current.clickCount == 1) {
 				UpdateTargetPosition();
 			}
 		}
 
 		/// <summary>Update is called once per frame</summary>
 		void Update () {
-			if (!onlyOnDoubleClick && cam != null) {
+			if (!onlyOnDoubleClick && cam != null && Input.GetMouseButton(1)) {
 				UpdateTargetPosition();
 			}
 		}
@@ -61,7 +61,7 @@ namespace Pathfinding {
 
 			if (positionFound && newPosition != target.position) {
                 
-                if (onlyOnDoubleClick) {
+                if (true) {
                     // Slightly inefficient way of finding all AIs, but this is just an example script, so it doesn't matter much.
                     // FindObjectsOfType does not support interfaces unfortunately.
                     IAstarAI ia = GameObject.FindGameObjectWithTag("Player").GetComponent<IAstarAI>();

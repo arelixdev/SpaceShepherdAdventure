@@ -19,7 +19,7 @@ public class CreateNode : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(transform.TransformPoint(GetComponent<MeshFilter>().sharedMesh.vertices[407]));
+        //Debug.Log(transform.TransformPoint(GetComponent<MeshFilter>().sharedMesh.vertices[407]));
         if (spawn)
         {
             spawn = false;
@@ -29,19 +29,20 @@ public class CreateNode : MonoBehaviour
             GameObject parentNode = new GameObject("Nodes");
             parentNode.transform.parent = transform;
             parentNode.transform.localScale = Vector3.one;
-            parentNode.transform.position = Vector3.zero;
+            parentNode.transform.localPosition = Vector3.zero;
 
             for (int i = 0; i < mesh.vertices.Length; i++)
             {
                 //GameObject sphere = new GameObject("Node_" + i.ToString());
-                if (Colide(mesh.vertices[i]))
+                if (true)
                 {
                     GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                     sphere.layer = LayerMask.NameToLayer("Node");
                     sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                     sphere.name = "Node_" + i.ToString();
                     sphere.transform.parent = parentNode.transform;
-                    sphere.transform.localPosition = mesh.vertices[i];
+                    //sphere.transform.localPosition = mesh.vertices[i];
+                    sphere.transform.position = transform.TransformPoint(mesh.vertices[i]);
                 }
             }
             if (barycentre)
@@ -59,7 +60,7 @@ public class CreateNode : MonoBehaviour
                     Vector3 center = ((p0 + p1 + p2) / 3);
 
                     //GameObject sphere = new GameObject("Node_" + i.ToString() + "_Centre");
-                    if (Colide(center))
+                    if (true)
                     {
                         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                         sphere.layer = LayerMask.NameToLayer("Node");
@@ -108,6 +109,6 @@ public class CreateNode : MonoBehaviour
 
     public void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(new Vector3(-6.173178f, 16.62939f, 9.238789f), .3f);
+        //Gizmos.DrawWireSphere(new Vector3(-6.173178f, 16.62939f, 9.238789f), .3f);
     }
 }
