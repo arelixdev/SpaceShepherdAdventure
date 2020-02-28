@@ -7,6 +7,12 @@ TagManager:
   - obstacle
   - planet
   - node
+  - water
+  - night
+  - nenufar
+  - boo
+  - mouton
+  - berger
   layers:
   - Default
   - TransparentFX
