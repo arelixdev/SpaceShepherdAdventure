@@ -73,7 +73,7 @@ MonoBehaviour:
   lastModified: 637166724688921196
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4353584082273541697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +134,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2330
+--- !u!114 &-3972930709058604798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep1
+  m_EditorClassIdentifier: 
+  Name: Sheep1
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-3684493384192942876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,13 +166,13 @@ MonoBehaviour:
   Path: event:/Mouton/Sheep
   guid: ed476e6ad6b2a04bb65ad9112aa03ad1
   Banks:
-  - {fileID: -5298346530255997430}
+  - {fileID: -2247909933977632885}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 960641662728845256}
-  - {fileID: 1998840699770800877}
+  - {fileID: -3972930709058604798}
+  - {fileID: 2231479070602726602}
   MinDistance: 1
   MaxDistance: 20
   Length: 2330
@@ -178,6 +195,24 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 738
+  Exists: 1
+--- !u!114 &-2247909933977632885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637184988270613035
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-2017061663553789223
 MonoBehaviour:
@@ -251,15 +286,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5801362199921300617}
-  - {fileID: -5298346530255997430}
+  - {fileID: -2247909933977632885}
   EditorEvents:
   - {fileID: -3684493384192942876}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5298346530255997430}
+  - {fileID: -2247909933977632885}
   StringsBanks:
   - {fileID: 5801362199921300617}
-  stringsBankWriteTime: 637166724688990595
+  stringsBankWriteTime: 637184988270603060
   cacheVersion: 3
 --- !u!114 &960641662728845256
 MonoBehaviour:
@@ -277,7 +312,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &1204625720876794116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +354,23 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 850
 --- !u!114 &1998840699770800877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep2
+  m_EditorClassIdentifier: 
+  Name: Sheep2
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &2231479070602726602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420,7 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Studio/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637166724688990595
+  lastModified: 637184988270603060
   LoadResult: 0
   FileSizes:
   - Name: Desktop
