@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f948f7aceebc3c49a945387907ff49c
+guid: 4ac201133e0c7274aa4b6e359281f2b7
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: 673aea6765083db48b0c2273a5950fb1, type: 2}
+    second: {fileID: 2100000, guid: 3b6150ca23bd0444aaa2567bcaab0cea, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -92,7 +92,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
