@@ -88,7 +88,7 @@ public class NightEnvironnement : MonoBehaviour
     {
         Vector3 start = transform.position;
         Vector3 end = start + dir * DistMult;
-        float t = 0;
+        //float t = 0;
 
         /*
         while (t < 1)
@@ -110,7 +110,6 @@ public class NightEnvironnement : MonoBehaviour
     {
         foreach (var node in nodes)
         {
-            Debug.Log((Vector3)node.position);
             SetNode._instance.NodeInfo(node, false);
         }
     }

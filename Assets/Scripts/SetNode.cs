@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class SetNode : MonoBehaviour
 {
+    Transform nodeParent;
     public bool detect;
     Mesh mesh;
     public float radius;
@@ -13,7 +14,7 @@ public class SetNode : MonoBehaviour
 
     public static SetNode _instance;
 
-    public Collider[] hitColliders;
+    Collider[] hitColliders;
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class SetNode : MonoBehaviour
 
     void Start()
     {
+        nodeParent = transform.GetChild(0);
         DetectUnwalk();
     }
 
@@ -44,11 +46,19 @@ public class SetNode : MonoBehaviour
     public void DetectUnwalk()
     {
         PointGraph pg = AstarPath.active.graphs[0] as PointGraph;
-
-        foreach (var node in pg.nodes)
+        for (int i = 1; i < pg.nodes.Length; i++)
         {
-            NodeInfo(node, true);
+            if(nodeParent.GetChild(i - 1).GetComponent<ForceNode>())
+            {
+                pg.nodes[i].Walkable = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().walkable;
+                pg.nodes[i].Tag = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().layer;
+            }
+            else
+            {
+                NodeInfo(pg.nodes[i], true);
+            }
         }
+        GetComponent<CreateNode>().ClearList();
     }
 
     public void NodeInfo(PointNode node, bool clear)
@@ -62,11 +72,6 @@ public class SetNode : MonoBehaviour
             {
                 if (hitColliders[i].CompareTag(info.tagHit))
                 {
-                    if (!clear)
-                    {
-                        Debug.Log((hitColliders[i].name));
-                        Debug.Log(info.walkable);
-                    }
                     node.Walkable = info.walkable;
                     node.Tag = info.layerNode;
                     if (hitColliders[i].GetComponent<NightEnvironnement>() && clear)
