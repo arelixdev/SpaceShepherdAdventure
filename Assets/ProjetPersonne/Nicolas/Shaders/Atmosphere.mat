@@ -42,6 +42,7 @@ Material:
     - Vector1_B21E137F: 0
     - Vector1_C223C4FA: 20
     m_Colors:
+    - Color_D41B4521: {r: 1, g: 0.2530334, b: 0, a: 0}
     - Color_F233EE46: {r: 0.09459869, g: 0, b: 1.1486983, a: 1}
 --- !u!114 &8752778160620638206
 MonoBehaviour:
