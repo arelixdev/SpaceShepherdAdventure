@@ -156,7 +156,7 @@ public class LevelEditor : EditorWindow
             HandleUtility.Repaint();
         }
 
-        if (e.type == EventType.MouseDown)
+        if (e.button == 0 && !Event.current.alt && e.type == EventType.MouseDown)
         {
             if (true)
             {
@@ -172,33 +172,39 @@ public class LevelEditor : EditorWindow
                         case PrefabAssetType.NotAPrefab:
                             newProp = Instantiate(go);
                             break;
+                        case PrefabAssetType.Model:
+                            newProp = Instantiate(go);
+                            break;
                     }
                 }
                 else if(player != null && showPlayer)
                 {
                     newProp = player;
                 }
-
-                newProp.transform.parent = parent;
-                newProp.transform.position = hit.point + newProp.transform.up * decalage;
-                newProp.transform.eulerAngles = Vector3.zero;
-                OrientBody(newProp.transform, hit.normal);
-                if(showRota)
+                if (newProp != null)
                 {
-                    if (newProp.GetComponent<SnapPlanet>())
+                    newProp.name = newProp.name.Replace("(Clone)", "");
+                    newProp.transform.parent = parent;
+                    newProp.transform.position = hit.point + newProp.transform.up * decalage;
+                    newProp.transform.eulerAngles = Vector3.zero;
+                    OrientBody(newProp.transform, hit.normal);
+                    if (showRota)
                     {
-                        newProp.GetComponent<SnapPlanet>().AngleWanted = Mathf.Ceil(Random.Range(minVal, maxVal));
+                        if (newProp.GetComponent<SnapPlanet>())
+                        {
+                            newProp.GetComponent<SnapPlanet>().AngleWanted = Mathf.Ceil(Random.Range(minVal, maxVal));
+                        }
+                        else
+                        {
+                            Quaternion rotationY = Quaternion.AngleAxis(Mathf.Ceil(Random.Range(minVal, maxVal)), newProp.transform.up);
+                            newProp.transform.rotation = rotationY * newProp.transform.rotation;
+                        }
                     }
-                    else
+                    if (showScale)
                     {
-                        Quaternion rotationY = Quaternion.AngleAxis(Mathf.Ceil(Random.Range(minVal, maxVal)), newProp.transform.up);
-                        newProp.transform.rotation = rotationY * newProp.transform.rotation;
+                        float randomScale = Random.Range(minValS, maxValS);
+                        newProp.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
                     }
-                }
-                if(showScale)
-                {
-                    float randomScale = Random.Range(minValS, maxValS);
-                    newProp.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
                 }
             }
         }
