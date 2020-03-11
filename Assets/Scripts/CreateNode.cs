@@ -5,24 +5,21 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CreateNode : MonoBehaviour
 {
-    public bool spawn;
-    public bool clear;
+    [Tooltip("Detruit les nodes et les respawn")] public bool spawn;
+    [Tooltip("Detruit les nodes")] public bool clear;
+    [Tooltip("Permet de choisir de faire spawn les nodes au milieu des triangles")] public bool barycentre;
+    [Tooltip("Permet de garder le script forcant les nodes")] public bool keepForce;
     Mesh mesh;
-    public bool barycentre;
-
-    public bool Colide(Vector3 pos)
-    {
-        int layerMask = ~LayerMask.GetMask("Node", "Ignore Raycast");
-        Collider[] hitColliders = Physics.OverlapSphere(transform.parent.TransformPoint(pos), GetComponent<SetNode>().radius, layerMask);
-        return hitColliders.Length > 0;
-    }
+    List<nodeSettings> nf = new List<nodeSettings>();
+    int index = 0;
 
     void Update()
     {
-        //Debug.Log(transform.TransformPoint(GetComponent<MeshFilter>().sharedMesh.vertices[407]));
         if (spawn)
         {
+            index = 0;
             spawn = false;
+            nf.Clear();
             ClearListEditor();
 
             mesh = GetComponent<MeshFilter>().sharedMesh;
@@ -41,8 +38,17 @@ public class CreateNode : MonoBehaviour
                     sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                     sphere.name = "Node_" + i.ToString();
                     sphere.transform.parent = parentNode.transform;
-                    //sphere.transform.localPosition = mesh.vertices[i];
                     sphere.transform.position = transform.TransformPoint(mesh.vertices[i]);
+                    if(nf.Count > 0)
+                    {
+                        if (nf[index].index == i)
+                        {
+                            ForceNode force = sphere.AddComponent<ForceNode>();
+                            force.walkable = nf[index].walk;
+                            force.layer = nf[index].layer;
+                            index = (index + 1) % nf.Count;
+                        }
+                    }
                 }
             }
             if (barycentre)
@@ -68,6 +74,16 @@ public class CreateNode : MonoBehaviour
                         sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                         sphere.transform.parent = parentNode.transform;
                         sphere.transform.position = center;
+                        if (nf.Count > 0)
+                        {
+                            if (nf[index].index == i + mesh.vertices.Length)
+                            {
+                                ForceNode force = sphere.AddComponent<ForceNode>();
+                                force.walkable = nf[index].walk;
+                                force.layer = nf[index].layer;
+                                index = (index + 1) % nf.Count;
+                            }
+                        }
                     }
                 }
             }
@@ -84,7 +100,8 @@ public class CreateNode : MonoBehaviour
     {
         if (Application.isPlaying)
         {
-            ClearList();
+            Debug.Log(GetComponent<MeshFilter>().mesh.triangles.Length/3);
+            //ClearList();
         }
     }
 
@@ -93,8 +110,31 @@ public class CreateNode : MonoBehaviour
         int childs = transform.childCount;
         for (int i = childs - 1; i >= 0; i--)
         {
-            if(transform.GetChild(i).name.Contains("Node"))
+            if (transform.GetChild(i).name.Contains("Node"))
+            {
+                if (keepForce)
+                {
+                    for (int j = 0; j < transform.GetChild(i).childCount; j++)
+                    {
+                        Transform childOfChild = transform.GetChild(i).GetChild(j);
+                        if (childOfChild.GetComponent<ForceNode>())
+                        {
+                            nodeSettings ns = new nodeSettings();
+                            ns.index = j;
+                            ns.walk = childOfChild.GetComponent<ForceNode>().walkable;
+                            ns.layer = childOfChild.GetComponent<ForceNode>().layer;
+
+                            nf.Add(ns);
+                        }
+                    }
+                }
+                else
+                {
+                    nf.Clear();
+                }
+                keepForce = false;
                 DestroyImmediate(transform.GetChild(i).gameObject);
+            }
         }
     }
     public void ClearList()
@@ -107,8 +147,10 @@ public class CreateNode : MonoBehaviour
         }
     }
 
-    public void OnDrawGizmos()
+    public class nodeSettings
     {
-        //Gizmos.DrawWireSphere(new Vector3(-6.173178f, 16.62939f, 9.238789f), .3f);
+        public int index;
+        public bool walk;
+        public uint layer;
     }
 }
