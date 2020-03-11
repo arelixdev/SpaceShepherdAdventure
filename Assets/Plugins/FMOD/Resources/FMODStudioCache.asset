@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Sheep/Sheep
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Name: Sheep
   Min: 1
   Max: 4
@@ -225,6 +226,14 @@ MonoBehaviour:
   FileSizes: []
   Exists: 1
 --- !u!114 &7531461868051511722
+=======
+  Name: Sheep1
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-3684493384192942876
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,17 +248,26 @@ MonoBehaviour:
   Path: event:/Mouton/Sheep
   guid: ed476e6ad6b2a04bb65ad9112aa03ad1
   Banks:
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   - {fileID: 2335743276149005363}
 =======
   - {fileID: 6231262234342142898}
 >>>>>>> Nicolas
+=======
+  - {fileID: 1879597312395463022}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   - {fileID: 8626655824899822317}
+=======
+  - {fileID: 803873604949520920}
+  - {fileID: -2782311657051217869}
+>>>>>>> Stashed changes
   MinDistance: 1
   MaxDistance: 20
   Length: 850
@@ -291,7 +309,11 @@ MonoBehaviour:
   - Name: Desktop
     Value: 738
   Exists: 1
+<<<<<<< Updated upstream
 --- !u!114 &-3193275989598712229
+=======
+--- !u!114 &-2782311657051217869
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,14 +323,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+<<<<<<< Updated upstream
   m_Name: parameter:/Sheep/Sheep1
   m_EditorClassIdentifier: 
   Name: Sheep1
+=======
+  m_Name: parameter:/Sheep/Sheep2
+  m_EditorClassIdentifier: 
+  Name: Sheep2
+>>>>>>> Stashed changes
   Min: 0
   Max: 2
   Default: 0
   Exists: 1
+<<<<<<< Updated upstream
 --- !u!114 &-2523606341916589660
+=======
+--- !u!114 &-2247909933977632885
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,6 +357,7 @@ MonoBehaviour:
   lastModified: 637167651517116899
   LoadResult: 0
   FileSizes: []
+<<<<<<< Updated upstream
   Exists: 1
 --- !u!114 &-2193872481182503334
 MonoBehaviour:
@@ -343,6 +376,8 @@ MonoBehaviour:
   lastModified: 637169305865667111
   LoadResult: 0
   FileSizes: []
+=======
+>>>>>>> Stashed changes
   Exists: 0
 --- !u!114 &-2017061663553789223
 MonoBehaviour:
@@ -502,17 +537,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5801362199921300617}
+<<<<<<< Updated upstream
   - {fileID: 2335743276149005363}
+=======
+  - {fileID: 1879597312395463022}
+>>>>>>> Stashed changes
   EditorEvents:
   - {fileID: -3684493384192942876}
   EditorParameters: []
   MasterBanks:
+<<<<<<< Updated upstream
   - {fileID: 2335743276149005363}
   StringsBanks:
   - {fileID: 5801362199921300617}
   stringsBankWriteTime: 637183934181672813
   cacheVersion: 3
 --- !u!114 &376396917501216461
+=======
+  - {fileID: 1879597312395463022}
+  StringsBanks:
+  - {fileID: 5801362199921300617}
+  stringsBankWriteTime: 637185042916681790
+  cacheVersion: 3
+--- !u!114 &803873604949520920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sheep/Sheep1
+  m_EditorClassIdentifier: 
+  Name: Sheep1
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &960641662728845256
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -570,6 +635,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 850
+--- !u!114 &1879597312395463022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637185042916701735
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1998840699770800877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,12 +682,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: FMOD_Studio/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637184977456162051
   LoadResult: 0
   FileSizes: []
   Exists: 1
+=======
+  Name: Sheep2
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+>>>>>>> Stashed changes
 --- !u!114 &2418602044487474251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,7 +869,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Studio/Build/Desktop/Master.strings.bank
   SubDir: 
+<<<<<<< Updated upstream
   lastModified: 637183934181672813
+=======
+  lastModified: 637185042916681790
+>>>>>>> Stashed changes
   LoadResult: 0
   FileSizes:
   - Name: Desktop
