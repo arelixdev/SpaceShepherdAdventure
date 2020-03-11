@@ -115,15 +115,15 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: Tree_02
-  - gameObject: {fileID: -927199367670048503, guid: 7f948f7aceebc3c49a945387907ff49c,
+  - gameObject: {fileID: -927199367670048503, guid: 91321b5596a95cb4fa2e4f2bdf11cd4e,
       type: 3}
     settings:
-      m_Strength: 62.3
+      m_Strength: 50
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 0.9, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1.2, z: 1}
-      m_UniformScale: {x: 0.9, y: 1.2}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 1
@@ -131,4 +131,21 @@ MonoBehaviour:
       m_XScaleBool: 0
       m_YScaleBool: 0
       m_ZScaleBool: 0
-    name: Grass
+    name: Anemone
+  - gameObject: {fileID: -927199367670048503, guid: 4ac201133e0c7274aa4b6e359281f2b7,
+      type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 0.8333333, y: 1.1666666}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Grass 1
