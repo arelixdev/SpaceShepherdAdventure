@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{72f5b9af-59c7-49fd-83cc-5a867496d4f3}">
+		<property name="assetPath">
+			<value>sound/sheep/mouton/bleat/shove/sfx_sheep_mouton_bleat_shove7.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.67308390022675735</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{57a90dc0-b93a-4d21-82ae-0e09d4e18641}</destination>
+		</relationship>
+	</object>
+</objects>

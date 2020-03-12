@@ -107,17 +107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Mouton/Sheep
+  Event: event:/Sound/Sheep/sheep_bleat
   PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   Params:
-  - Name: Sheep1
-    Value: 0
-  - Name: Sheep2
-    Value: 0
   - Name: Sheep
     Value: 1
   OverrideAttenuation: 0

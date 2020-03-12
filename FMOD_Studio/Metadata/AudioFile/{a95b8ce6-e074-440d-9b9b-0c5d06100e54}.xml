@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a95b8ce6-e074-440d-9b9b-0c5d06100e54}">
+		<property name="assetPath">
+			<value>sound/player/steps/grass/run/sfx_player_run_grass11.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.32210884353741498</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{57a90dc0-b93a-4d21-82ae-0e09d4e18641}</destination>
+		</relationship>
+	</object>
+</objects>

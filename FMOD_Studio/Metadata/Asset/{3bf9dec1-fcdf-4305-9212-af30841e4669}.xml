@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{3bf9dec1-fcdf-4305-9212-af30841e4669}">
+		<property name="assetPath">
+			<value>sound/sheep/mouton/bleat/idle/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{57a90dc0-b93a-4d21-82ae-0e09d4e18641}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{b1b3b79b-e7b9-487e-8785-b4208d9c19a5}">
+		<property name="name">
+			<value>Event_Sheep</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d97ed4af-bf11-4781-9123-373b93517ed0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8463ec5f-ca3c-4490-aa36-52d02ee708c2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8463ec5f-ca3c-4490-aa36-52d02ee708c2}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
