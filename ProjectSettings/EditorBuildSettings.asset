@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ProjetPersonne/Yann/Test_Yann.unity
     guid: e1426f996682dbb42b6dea15935a81dd
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProjetPersonne/Nicolas/LevelDesign.unity
     guid: 2429d8ef338fdae4e9a9872cb608cbda
+  - enabled: 1
+    path: Assets/ProjetPersonne/Nicolas/Nicolas.unity
+    guid: 60cb7502d2f886e4fb1ec5c4d7b1673a
   m_configObjects: {}

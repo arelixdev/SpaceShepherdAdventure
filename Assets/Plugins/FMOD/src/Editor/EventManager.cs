@@ -34,7 +34,7 @@ namespace FMODUnity
             countdownTimer = 0;
             UpdateCache();
             OnCacheChange();
-            CopyToStreamingAssets();
+            //CopyToStreamingAssets();
         }
 #endif
 
