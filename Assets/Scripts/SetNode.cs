@@ -16,6 +16,8 @@ public class SetNode : MonoBehaviour
 
     Collider[] hitColliders;
 
+    int index;
+
     void Awake()
     {
         if (_instance == null)
@@ -30,7 +32,6 @@ public class SetNode : MonoBehaviour
 
     void Start()
     {
-        nodeParent = transform.GetChild(0);
         DetectUnwalk();
     }
 
@@ -45,18 +46,36 @@ public class SetNode : MonoBehaviour
 
     public void DetectUnwalk()
     {
+        index = 0;
+        nodeParent = transform.GetChild(0);
+
         PointGraph pg = AstarPath.active.graphs[0] as PointGraph;
         for (int i = 1; i < pg.nodes.Length; i++)
         {
-            if(nodeParent.GetChild(i - 1).GetComponent<ForceNode>())
+            Debug.Log(nodeParent.GetChild(i - 1).name);
+            if (nodeParent.GetChild(i - 1).GetComponent<ForceNode>())
             {
-                pg.nodes[i].Walkable = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().walkable;
-                pg.nodes[i].Tag = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().layer;
+                Debug.Log(nodeParent.GetChild(i).name);
+                if (!nodeParent.GetChild(i - 1).GetComponent<ForceNode>().breakConnections)
+                {
+                    pg.nodes[i].Walkable = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().walkable;
+                    pg.nodes[i].Tag = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().layer;
+                }
+                else
+                {
+                    pg.nodes[i].ClearConnections(true);
+                }
             }
             else
             {
                 NodeInfo(pg.nodes[i], true);
             }
+            /*
+            if(i == nodeParent.childCount)
+            {
+                Debug.Log("Test");
+                index++;
+            }*/
         }
         GetComponent<CreateNode>().ClearList();
     }

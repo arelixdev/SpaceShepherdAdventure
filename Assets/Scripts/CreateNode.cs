@@ -17,77 +17,8 @@ public class CreateNode : MonoBehaviour
     {
         if (spawn)
         {
-            index = 0;
             spawn = false;
-            nf.Clear();
-            ClearListEditor();
-
-            mesh = GetComponent<MeshFilter>().sharedMesh;
-            GameObject parentNode = new GameObject("Nodes");
-            parentNode.transform.parent = transform;
-            parentNode.transform.localScale = Vector3.one;
-            parentNode.transform.localPosition = Vector3.zero;
-
-            for (int i = 0; i < mesh.vertices.Length; i++)
-            {
-                //GameObject sphere = new GameObject("Node_" + i.ToString());
-                if (true)
-                {
-                    GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                    sphere.layer = LayerMask.NameToLayer("Node");
-                    sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-                    sphere.name = "Node_" + i.ToString();
-                    sphere.transform.parent = parentNode.transform;
-                    sphere.transform.position = transform.TransformPoint(mesh.vertices[i]);
-                    if(nf.Count > 0)
-                    {
-                        if (nf[index].index == i)
-                        {
-                            ForceNode force = sphere.AddComponent<ForceNode>();
-                            force.walkable = nf[index].walk;
-                            force.layer = nf[index].layer;
-                            index = (index + 1) % nf.Count;
-                        }
-                    }
-                }
-            }
-            if (barycentre)
-            {
-                int[] triangles = mesh.triangles;
-                for (int i = 0; i < triangles.Length / 3; i++)
-                {
-                    Vector3 p0 = mesh.vertices[triangles[i * 3 + 0]];
-                    Vector3 p1 = mesh.vertices[triangles[i * 3 + 1]];
-                    Vector3 p2 = mesh.vertices[triangles[i * 3 + 2]];
-
-                    p0 = transform.TransformPoint(p0);
-                    p1 = transform.TransformPoint(p1);
-                    p2 = transform.TransformPoint(p2);
-                    Vector3 center = ((p0 + p1 + p2) / 3);
-
-                    //GameObject sphere = new GameObject("Node_" + i.ToString() + "_Centre");
-                    if (true)
-                    {
-                        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                        sphere.layer = LayerMask.NameToLayer("Node");
-                        sphere.name = "Node_" + i.ToString() + "_Centre";
-                        sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-                        sphere.transform.parent = parentNode.transform;
-                        sphere.transform.position = center;
-                        if (nf.Count > 0)
-                        {
-                            if (nf[index].index == i + mesh.vertices.Length)
-                            {
-                                ForceNode force = sphere.AddComponent<ForceNode>();
-                                force.walkable = nf[index].walk;
-                                force.layer = nf[index].layer;
-                                index = (index + 1) % nf.Count;
-                            }
-                        }
-                    }
-                }
-            }
-            AstarPath.active.Scan();
+            Spawn();
         }
         if(clear)
         {
@@ -100,7 +31,6 @@ public class CreateNode : MonoBehaviour
     {
         if (Application.isPlaying)
         {
-            //Debug.Log(GetComponent<MeshFilter>().mesh.triangles.Length/3);
             //ClearList();
         }
     }
@@ -145,6 +75,80 @@ public class CreateNode : MonoBehaviour
             if (transform.GetChild(i).name.Contains("Node"))
                 Destroy(transform.GetChild(i).gameObject);
         }
+    }
+
+    public void Spawn()
+    {
+        index = 0;
+        nf.Clear();
+        ClearListEditor();
+
+        mesh = GetComponent<MeshFilter>().sharedMesh;
+        GameObject parentNode = new GameObject("Nodes");
+        parentNode.transform.parent = transform;
+        parentNode.transform.localScale = Vector3.one;
+        parentNode.transform.localPosition = Vector3.zero;
+
+        for (int i = 0; i < mesh.vertices.Length; i++)
+        {
+            //GameObject sphere = new GameObject("Node_" + i.ToString());
+            if (true)
+            {
+                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                sphere.layer = LayerMask.NameToLayer("Node");
+                sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                sphere.name = "Node_" + i.ToString();
+                sphere.transform.parent = parentNode.transform;
+                sphere.transform.position = transform.TransformPoint(mesh.vertices[i]);
+                if (nf.Count > 0)
+                {
+                    if (nf[index].index == i)
+                    {
+                        ForceNode force = sphere.AddComponent<ForceNode>();
+                        force.walkable = nf[index].walk;
+                        force.layer = nf[index].layer;
+                        index = (index + 1) % nf.Count;
+                    }
+                }
+            }
+        }
+        if (barycentre)
+        {
+            int[] triangles = mesh.triangles;
+            for (int i = 0; i < triangles.Length / 3; i++)
+            {
+                Vector3 p0 = mesh.vertices[triangles[i * 3 + 0]];
+                Vector3 p1 = mesh.vertices[triangles[i * 3 + 1]];
+                Vector3 p2 = mesh.vertices[triangles[i * 3 + 2]];
+
+                p0 = transform.TransformPoint(p0);
+                p1 = transform.TransformPoint(p1);
+                p2 = transform.TransformPoint(p2);
+                Vector3 center = ((p0 + p1 + p2) / 3);
+
+                //GameObject sphere = new GameObject("Node_" + i.ToString() + "_Centre");
+                if (true)
+                {
+                    GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    sphere.layer = LayerMask.NameToLayer("Node");
+                    sphere.name = "Node_" + i.ToString() + "_Centre";
+                    sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                    sphere.transform.parent = parentNode.transform;
+                    sphere.transform.position = center;
+                    if (nf.Count > 0)
+                    {
+                        if (nf[index].index == i + mesh.vertices.Length)
+                        {
+                            ForceNode force = sphere.AddComponent<ForceNode>();
+                            force.walkable = nf[index].walk;
+                            force.layer = nf[index].layer;
+                            index = (index + 1) % nf.Count;
+                        }
+                    }
+                }
+            }
+        }
+        AstarPath.active.Scan();
     }
 
     public class nodeSettings
