@@ -116,7 +116,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_8C747D18: {r: 0.21960784, g: 0.32156864, b: 0.20392157, a: 0}
+    - Color_8C747D18: {r: 0.21568628, g: 0.32156864, b: 0.20392157, a: 0}
     - Color_C6CCB9DB: {r: 1, g: 1, b: 1, a: 0}
     - Color_EF44F0C0: {r: 0, g: 0, b: 0, a: 0}
     - Color_F233EE46: {r: 0.3490196, g: 0, b: 1, a: 0}
