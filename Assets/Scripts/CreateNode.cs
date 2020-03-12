@@ -100,7 +100,7 @@ public class CreateNode : MonoBehaviour
     {
         if (Application.isPlaying)
         {
-            Debug.Log(GetComponent<MeshFilter>().mesh.triangles.Length/3);
+            //Debug.Log(GetComponent<MeshFilter>().mesh.triangles.Length/3);
             //ClearList();
         }
     }
