@@ -16,7 +16,7 @@ public class SetNode : MonoBehaviour
 
     Collider[] hitColliders;
 
-    int index;
+    int index, indexChild;
 
     void Awake()
     {
@@ -47,19 +47,18 @@ public class SetNode : MonoBehaviour
     public void DetectUnwalk()
     {
         index = 0;
-        nodeParent = transform.GetChild(0);
+        indexChild = 0;
+        nodeParent = transform.GetChild(index);
 
         PointGraph pg = AstarPath.active.graphs[0] as PointGraph;
         for (int i = 1; i < pg.nodes.Length; i++)
         {
-            Debug.Log(nodeParent.GetChild(i - 1).name);
-            if (nodeParent.GetChild(i - 1).GetComponent<ForceNode>())
+            if (nodeParent.GetChild(indexChild).GetComponent<ForceNode>())
             {
-                Debug.Log(nodeParent.GetChild(i).name);
-                if (!nodeParent.GetChild(i - 1).GetComponent<ForceNode>().breakConnections)
+                if (!nodeParent.GetChild(indexChild).GetComponent<ForceNode>().breakConnections)
                 {
-                    pg.nodes[i].Walkable = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().walkable;
-                    pg.nodes[i].Tag = nodeParent.GetChild(i - 1).GetComponent<ForceNode>().layer;
+                    pg.nodes[i].Walkable = nodeParent.GetChild(indexChild).GetComponent<ForceNode>().walkable;
+                    pg.nodes[i].Tag = nodeParent.GetChild(indexChild).GetComponent<ForceNode>().layer;
                 }
                 else
                 {
@@ -70,12 +69,14 @@ public class SetNode : MonoBehaviour
             {
                 NodeInfo(pg.nodes[i], true);
             }
-            /*
-            if(i == nodeParent.childCount)
+            indexChild = (indexChild + 1) % nodeParent.childCount;
+
+            if (i == nodeParent.childCount)
             {
-                Debug.Log("Test");
-                index++;
-            }*/
+                indexChild = 0;
+                index = (index + 1) % transform.childCount;
+                nodeParent = transform.GetChild(index);
+            }
         }
         GetComponent<CreateNode>().ClearList();
     }

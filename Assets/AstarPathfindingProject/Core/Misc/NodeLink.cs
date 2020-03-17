@@ -88,8 +88,9 @@ namespace Pathfinding {
 
 
 			if (deleteConnection) {
-				startNode.RemoveConnection(endNode);
-				if (!oneWay)
+                //startNode.RemoveConnection(endNode);
+                startNode.ClearConnections(true);
+                if (!oneWay)
 					endNode.RemoveConnection(startNode);
 			} else {
 				uint cost = (uint)System.Math.Round((startNode.position-endNode.position).costMagnitude*costFactor);

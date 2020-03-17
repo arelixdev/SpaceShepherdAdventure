@@ -41,7 +41,7 @@ public class CreateVertex : MonoBehaviour
                 sphere.transform.parent = transform;
                 sphere.transform.localScale = scaling;
                 sphere.transform.localPosition = mesh.vertices[i];
-                sphere.GetComponent<CreateGrid>().detect = true;
+                //sphere.GetComponent<CreateGrid>().detect = true;
             }
         }
         if (barycentre)
@@ -64,7 +64,7 @@ public class CreateVertex : MonoBehaviour
                 sphere.transform.parent = transform;
                 sphere.transform.localScale = scaling;
                 sphere.transform.position = center;
-                sphere.GetComponent<CreateGrid>().detect = true;
+                //sphere.GetComponent<CreateGrid>().detect = true;
             }
         }
 

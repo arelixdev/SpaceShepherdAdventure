@@ -99,7 +99,7 @@ namespace Drawing {
 					// We can therefore easily (and without a high performance cost)
 					// trap accidental Draw.* calls from OnDrawGizmos functions
 					// by doing this check when the buffer is empty.
-					AssertNotRendering();
+					//AssertNotRendering();
 				}
 #endif
 

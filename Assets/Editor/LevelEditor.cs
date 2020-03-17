@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using FMODUnity;
 
 public class LevelEditor : EditorWindow
 {
@@ -30,6 +31,9 @@ public class LevelEditor : EditorWindow
     CreateNode planet;
     bool showPlanet;
     bool bary;
+
+    bool showFmod;
+    GameObject applySound;
 
     void OnEnable()
     {
@@ -238,6 +242,43 @@ public class LevelEditor : EditorWindow
                 if (GUILayout.Button("Keep Force Node (" + planet.GetComponent<CreateNode>().keepForce + ")"))
                 {
                     planet.keepForce = !planet.keepForce;
+                }
+            }
+        }
+        #endregion
+
+        #region Gestion FMOD
+
+        showFmod = EditorGUILayout.Foldout(showFmod, "Gestion FMOD");
+
+        if(showFmod)
+        {
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Prefab to apply Fmod", EditorStyles.boldLabel);
+            applySound = (GameObject)EditorGUILayout.ObjectField(applySound, typeof(GameObject), true);
+            EditorGUILayout.EndHorizontal();
+            if(applySound == null)
+            {
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.HelpBox("Il manque un prefab à modifier", MessageType.Warning);
+                EditorGUILayout.EndHorizontal();
+            }
+            else
+            {
+                EditorGUILayout.BeginHorizontal();
+                if (GUILayout.Button("Apply Emitter"))
+                {
+                    applySound.AddComponent<StudioEventEmitter>();
+                }
+                EditorGUILayout.EndHorizontal();
+                if (applySound.GetComponent<StudioEventEmitter>() != null)
+                {
+                    EditorGUILayout.BeginHorizontal();
+                    if (GUILayout.Button("Remove Emitter"))
+                    {
+                        DestroyImmediate(applySound.GetComponent<StudioEventEmitter>());
+                    }
+                    EditorGUILayout.EndHorizontal();
                 }
             }
         }

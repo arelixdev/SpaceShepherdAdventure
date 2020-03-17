@@ -12,6 +12,7 @@ public class CreateNode : MonoBehaviour
     Mesh mesh;
     List<nodeSettings> nf = new List<nodeSettings>();
     int index = 0;
+    int indexCheck = 0;
 
     void Update()
     {
@@ -80,6 +81,7 @@ public class CreateNode : MonoBehaviour
     public void Spawn()
     {
         index = 0;
+        indexCheck = 0;
         nf.Clear();
         ClearListEditor();
 
@@ -88,16 +90,16 @@ public class CreateNode : MonoBehaviour
         parentNode.transform.parent = transform;
         parentNode.transform.localScale = Vector3.one;
         parentNode.transform.localPosition = Vector3.zero;
-
+        
         for (int i = 0; i < mesh.vertices.Length; i++)
         {
-            //GameObject sphere = new GameObject("Node_" + i.ToString());
-            if (true)
+            //if (CheckNode(transform.TransformPoint(mesh.vertices[i])))
+            if(true)
             {
                 GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sphere.layer = LayerMask.NameToLayer("Node");
                 sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-                sphere.name = "Node_" + i.ToString();
+                sphere.name = "Node_" + (i - indexCheck).ToString();
                 sphere.transform.parent = parentNode.transform;
                 sphere.transform.position = transform.TransformPoint(mesh.vertices[i]);
                 if (nf.Count > 0)
@@ -112,6 +114,7 @@ public class CreateNode : MonoBehaviour
                 }
             }
         }
+        
         if (barycentre)
         {
             int[] triangles = mesh.triangles;
@@ -126,7 +129,6 @@ public class CreateNode : MonoBehaviour
                 p2 = transform.TransformPoint(p2);
                 Vector3 center = ((p0 + p1 + p2) / 3);
 
-                //GameObject sphere = new GameObject("Node_" + i.ToString() + "_Centre");
                 if (true)
                 {
                     GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
@@ -149,6 +151,23 @@ public class CreateNode : MonoBehaviour
             }
         }
         AstarPath.active.Scan();
+    }
+
+    public bool CheckNode(Vector3 pos)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(pos, .5f);
+        bool check = true;
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            Debug.Log(hitColliders[i].gameObject.name);
+            if(hitColliders[i].gameObject.layer == 8)
+            {
+                //Debug.Log("Node touche");
+                check = false;
+                indexCheck++;
+            }
+        }
+        return check;
     }
 
     public class nodeSettings

@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: FMOD_Studio\SoundDesgin_ProjetFinAnnee.fspro
+  sourceProjectPath: FMOD_Studio/SoundDesgin_ProjetFinAnnee.fspro
   sourceBankPath: FMOD_Studio\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
