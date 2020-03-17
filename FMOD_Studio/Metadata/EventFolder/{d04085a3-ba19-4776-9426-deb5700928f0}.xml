@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EventFolder" id="{d04085a3-ba19-4776-9426-deb5700928f0}">
+		<property name="name">
+			<value>mouton</value>
+		</property>
+		<relationship name="folder">
+			<destination>{89bbacdd-16c2-47eb-b484-a974bf47d31c}</destination>
+		</relationship>
+	</object>
+</objects>

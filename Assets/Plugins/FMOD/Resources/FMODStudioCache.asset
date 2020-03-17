@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8856202827415391726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196048812693647
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8845508331502667056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,6 +35,63 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 1
+--- !u!114 &-8806387587748908860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Steps/sfx_player_run_ice
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Steps/sfx_player_run_ice
+  guid: a586868c0b382e4db13b5dd41683c4a9
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8649202548437222452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-8645076634259360235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-8554674376513049815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,14 +124,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Sound/Sheep/sheep_bleat
   guid: ed476e6ad6b2a04bb65ad9112aa03ad1
-  Banks:
-  - {fileID: -835650263144376284}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 6334797037383313006}
-  - {fileID: -3338459020973980321}
+  - {fileID: 8486411698325500104}
+  - {fileID: 7372809234149410289}
   MinDistance: 1
   MaxDistance: 20
   Length: 100
@@ -78,6 +152,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8078583084767729965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_mouton_steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
 --- !u!114 &-7867707805601846396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,17 +183,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Sound/Player/player_steps
   guid: eaf2fbc141358044bceceeef9c818379
-  Banks:
-  - {fileID: -835650263144376284}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2116445273047045523}
-  - {fileID: 3467719022895889558}
+  - {fileID: 6230719124665764351}
+  - {fileID: 8903545557543641527}
   MinDistance: 1
   MaxDistance: 20
   Length: 100
+--- !u!114 &-7537782410531217087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-7360996179649073200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_mouton_steps/Steps
+  m_EditorClassIdentifier: 
+  Name: Steps
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &-7292490202789612288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_mouton_steps/Steps
+  m_EditorClassIdentifier: 
+  Name: Steps
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-7267839072893906301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-7158115713583099432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +313,30 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &-6577975100334755377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Steps/sfx_player_walk_grass
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Steps/sfx_player_walk_grass
+  guid: eaf2fbc141358044bceceeef9c818379
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &-6233759778664584514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +357,97 @@ MonoBehaviour:
   - Name: Desktop
     Value: 884
   Exists: 1
+--- !u!114 &-6109101057942359877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &-5621576626594028531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sfx_player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &-4770554753816503350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-4709994340828738487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-4476645755604241120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/mouton/sfx_sheep_mouton_walk_grass
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/mouton/sfx_sheep_mouton_walk_grass
+  guid: b6bda6cc4468fc45a9fb27e9206ee6b7
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 711
 --- !u!114 &-4353584082273541697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +465,23 @@ MonoBehaviour:
   lastModified: 637165168723518864
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-4280281193729176566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/ParaTest
+  m_EditorClassIdentifier: 
+  Name: ParaTest
+  Min: 0
+  Max: 3
+  Default: 0
   Exists: 0
 --- !u!114 &-3986953883403542434
 MonoBehaviour:
@@ -219,6 +508,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2330
+--- !u!114 &-3908154445947676922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Steps/sfx_player_walk_ice
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Steps/sfx_player_walk_ice
+  guid: b23a46070cefbd4f85c657b629f5302c
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3777324238153082359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_mouton_steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 1
 --- !u!114 &-3684493384192942876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +571,40 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 850
+--- !u!114 &-3637673573463087404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-3409967540099054852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sfx_player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-3338459020973980321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +621,7 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3290664269959275160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +660,46 @@ MonoBehaviour:
   - Name: Desktop
     Value: 738
   Exists: 1
+--- !u!114 &-3215911632285144822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-2950368569697400225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/mouton/sfx_sheep_mouton_run_ice
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/mouton/sfx_sheep_mouton_run_ice
+  guid: b07a6df1ecc85446967b8e367a7bf5f7
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2632261909747411247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +716,24 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &-2206411114099735942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &-2169168201612195215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +750,7 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2116445273047045523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +767,7 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2017061663553789223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +826,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 850
+--- !u!114 &-1532367727680071113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Steps/sfx_player_run_grass
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Steps/sfx_player_run_grass
+  guid: f45a42f6ad934349a610144273dfefd8
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 365
+--- !u!114 &-1519449917309689576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/mouton/sfx_sheep_mouton_run_desert
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/mouton/sfx_sheep_mouton_run_desert
+  guid: 9a3cc26cb8e57b44ac94ddec2ac7ba41
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1187340392889577169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +906,41 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-1016632788126807733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196222664775228
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-923975241137329217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sfx_player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-835650263144376284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +958,7 @@ MonoBehaviour:
   lastModified: 637196039787848968
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-569681123486972572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +994,30 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 0
+--- !u!114 &-234065969124789725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Sfx_player_speak
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Sfx_player_speak
+  guid: 728726a308d6804bae018d2c7bd8daf8
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5621576626594028531}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-213668361579408283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +1035,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-12342474325112512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196229008033252
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,20 +1067,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5801362199921300617}
-  - {fileID: -835650263144376284}
+  - {fileID: 7364100738417273895}
   EditorEvents:
-  - {fileID: 889595928796918087}
-  - {fileID: 4807519957941945622}
   - {fileID: 5520486432295296544}
-  - {fileID: -7867707805601846396}
-  - {fileID: -8514690612966691114}
+  - {fileID: 6068273793610754275}
+  - {fileID: 8581494448810124513}
+  - {fileID: 5122599292501624237}
+  - {fileID: -234065969124789725}
+  - {fileID: -1519449917309689576}
+  - {fileID: -8806387587748908860}
+  - {fileID: -2950368569697400225}
+  - {fileID: -3908154445947676922}
+  - {fileID: -4476645755604241120}
+  - {fileID: -6577975100334755377}
+  - {fileID: 4125066191360012015}
+  - {fileID: -1532367727680071113}
+  - {fileID: 7405840459100270874}
+  - {fileID: 8017880001160887082}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -835650263144376284}
+  - {fileID: 7364100738417273895}
   StringsBanks:
   - {fileID: 5801362199921300617}
-  stringsBankWriteTime: 637196039787940646
+  stringsBankWriteTime: 637196242237306522
   cacheVersion: 3
+--- !u!114 &38209201422386127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &262513988152820755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &376396917501216461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +1143,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &780105964943952346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &889595928796918087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,13 +1174,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Sound/Player/player_speak
   guid: 728726a308d6804bae018d2c7bd8daf8
-  Banks:
-  - {fileID: -835650263144376284}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2632261909747411247}
+  - {fileID: 8008243082063415370}
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
@@ -596,6 +1199,24 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+  Exists: 0
+--- !u!114 &1260679396947874836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196049528380282
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &1719861642244138431
 MonoBehaviour:
@@ -620,6 +1241,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 850
+--- !u!114 &1985799315705222474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_mouton_steps/Steps
+  m_EditorClassIdentifier: 
+  Name: Steps
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &2134221590083627447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +1274,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &2313723800658848086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
 --- !u!114 &2418602044487474251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +1310,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2694960230122515738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &3467719022895889558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +1343,7 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3760543352444203097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,6 +1360,65 @@ MonoBehaviour:
   Min: 1
   Max: 4
   Default: 1
+  Exists: 0
+--- !u!114 &3983070736594636048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sfx_player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &4125066191360012015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/sfx_sheep_bleat
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/sfx_sheep_bleat
+  guid: ed476e6ad6b2a04bb65ad9112aa03ad1
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8033957576522253593}
+  - {fileID: -6109101057942359877}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &4137825577896326802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &4142172913335382530
 MonoBehaviour:
@@ -760,6 +1491,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4711700746709930384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_mouton_steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
 --- !u!114 &4807519957941945622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,14 +1522,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Sound/Sheep/sheep_mouton_steps
   guid: b6bda6cc4468fc45a9fb27e9206ee6b7
-  Banks:
-  - {fileID: -835650263144376284}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2169168201612195215}
-  - {fileID: -6776497520313702698}
+  - {fileID: -3777324238153082359}
+  - {fileID: -7360996179649073200}
   MinDistance: 1
   MaxDistance: 20
   Length: 100
@@ -803,6 +1550,63 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &5026600723132528844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_steps/Steps
+  m_EditorClassIdentifier: 
+  Name: Steps
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &5117605235646751689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &5122599292501624237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/mouton/sfx_sheep_mouton_walk_ice
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/mouton/sfx_sheep_mouton_walk_ice
+  guid: 61854efdc6015b4885b85ce013546b39
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5520486432295296544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,12 +1622,12 @@ MonoBehaviour:
   Path: event:/Ambiance
   guid: cfc1178ed704ee42b75a7d6f05ef7e69
   Banks:
-  - {fileID: -835650263144376284}
+  - {fileID: 7364100738417273895}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2134221590083627447}
+  - {fileID: 780105964943952346}
   MinDistance: 1
   MaxDistance: 20
   Length: 40421
@@ -858,12 +1662,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Studio/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637196039787940646
+  lastModified: 637196242237306522
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1238
+    Value: 1642
   Exists: 1
+--- !u!114 &6021432743890539188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/Jour_Nuit
+  m_EditorClassIdentifier: 
+  Name: Jour_Nuit
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &6055494861146831708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +1702,46 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &6068273793610754275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Steps/sfx_player_walk_desert
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Steps/sfx_player_walk_desert
+  guid: 0d8acc941752b643a83c11aad003c066
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6230719124665764351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 1
 --- !u!114 &6334797037383313006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,7 +1758,7 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6421174001267638723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,6 +1776,59 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &6479672641435837763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196057741526501
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6509283459935653215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &6540736292901553683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196221419459715
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6596042528479827677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,6 +1846,81 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &6630776496917167402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
+--- !u!114 &7364100738417273895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196242237166897
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7372809234149410289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &7405840459100270874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/mouton/sfx_sheep_mouton_run_grass
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/mouton/sfx_sheep_mouton_run_grass
+  guid: fb3b57880336b64c8f711c417a85aa80
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 365
 --- !u!114 &7849810267804795018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,6 +1939,80 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7884167361287003211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &8008243082063415370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_speak/Event_Player
+  m_EditorClassIdentifier: 
+  Name: Event_Player
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &8017880001160887082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Player/Steps/sfx_player_run_desert
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Player/Steps/sfx_player_run_desert
+  guid: ff0c7cd9cf58954d8975fa0dc0fae13b
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8033957576522253593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &8139590748497101957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,6 +2031,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8279127246580283773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_steps/Steps
+  m_EditorClassIdentifier: 
+  Name: Steps
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &8286568297036168561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,6 +2066,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8486411698325500104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sheep_bleat/Sheep
+  m_EditorClassIdentifier: 
+  Name: Sheep
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &8490390551980068105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,6 +2101,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8581494448810124513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Sheep/mouton/sfx_sheep_mouton_walk_desert
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Sheep/mouton/sfx_sheep_mouton_walk_desert
+  guid: 14e3cc1f497de8479655967cda0ff02a
+  Banks:
+  - {fileID: 7364100738417273895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8835467899248564480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1021,6 +2141,40 @@ MonoBehaviour:
   lastModified: 637166722569226590
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &8903545557543641527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_steps/Steps
+  m_EditorClassIdentifier: 
+  Name: Steps
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &9076261150477559763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_sheep_bleat/Event_Sheep
+  m_EditorClassIdentifier: 
+  Name: Event_Sheep
+  Min: 0
+  Max: 3
+  Default: 0
   Exists: 0
 --- !u!114 &9200574538802817913
 MonoBehaviour:

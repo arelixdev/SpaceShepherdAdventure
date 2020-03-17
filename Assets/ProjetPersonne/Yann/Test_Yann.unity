@@ -298,20 +298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -377,20 +367,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -456,25 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[2].Value
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -540,30 +505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[1].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[2].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -629,20 +574,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -708,25 +643,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[1].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -792,20 +712,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 2.62
-      objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
       propertyPath: m_Name
       value: SheepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0e81f3502c89848a96826ca94d4400, type: 3}
@@ -870,36 +780,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[1].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[0].Name
-      value: Sheep2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[1].Name
-      value: Sheep1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931339644980135536, guid: 8a0e81f3502c89848a96826ca94d4400,
-        type: 3}
-      propertyPath: Params.Array.data[2].Value
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7931339644980135537, guid: 8a0e81f3502c89848a96826ca94d4400,
         type: 3}
